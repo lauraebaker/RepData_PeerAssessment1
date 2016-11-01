@@ -107,6 +107,8 @@ imputedactivity<-activity %>% group_by( interval ) %>%transform(steps = ifelse(i
 dailyactivityimpute<-imputedactivity%>%group_by(date)%>%summarise(totalsteps=sum(steps,na.rm=TRUE))
 ```
 
+The data was imputed with the average steps for each interval.
+
 Histogram of the total number of steps taken each day after missing values are imputed
 
 
